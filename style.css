@@ -1,3 +1,7 @@
+:root {
+  --display: flex;
+}
+
 body {
   margin: 0;
 }
@@ -10,11 +14,18 @@ body {
 }
 
 #player {
+  border: red;
+  border-style: solid;
   width: 70px;
   height: 70px;
   position: absolute;
   bottom: 300px;
   left: 100px;
+}
+
+#player img {
+  width: 100%;
+  height: 100%;
 }
 
 #player2 {
@@ -27,11 +38,6 @@ body {
 }
 
 #player2 img {
-  width: 100%;
-  height: 100%;
-}
-
-#player img {
   width: 100%;
   height: 100%;
 }
@@ -50,7 +56,7 @@ body {
 }
 
 .playerJump {
-  animation: playerJump 1s linear;
+  animation: playerJump 0.5s linear;
 }
 
 @keyframes playerJump {
@@ -74,15 +80,44 @@ body {
 
 #cactus {
   position: absolute;
-  width: 55px;
+  width: 45px;
   height: 80px;
   bottom: 290px;
-  right: 0;
+  right: 5%;
+  display: inline-flex;
+  align-items: center;
 }
 
-#cactus img {
+.cactusMovement {
+  animation: cactusMovement 1.5s linear infinite;
+}
+
+#img {
+  display: none;
   max-width: 100%;
   height: 100%;
+}
+#img2 {
+  display: none;
+  max-width: 100%;
+  height: 100%;
+  margin-left: 5px;
+  margin-top: -1px;
+}
+#img3 {
+  max-width: 100%;
+  height: 100%;
+  margin-left: 2px;
+  margin-top: -1px;
+}
+
+@keyframes cactusMovement {
+  from {
+    right: 5%;
+  }
+  to {
+    right: 100%;
+  }
 }
 
 .scoreContainer {
