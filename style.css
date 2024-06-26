@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+}
+
+#board {
+  background-color: blue;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+#player {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 300px;
+  left: 100px;
+}
+
+#player2 {
+  visibility: hidden;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 300px;
+  left: 100px;
+}
+
+#player2 img {
+  width: 100%;
+  height: 100%;
+}
+
+#player img {
+  width: 100%;
+  height: 100%;
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("./img/background.png");
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  animation: backgroundMove 20s linear infinite;
+}
+
+.playerJump {
+  animation: playerJump 1s linear;
+}
+
+@keyframes playerJump {
+  0% {
+    bottom: 300px;
+  }
+  45%,
+  60% {
+    bottom: 400px;
+  }
+}
+
+@keyframes backgroundMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px;
+  }
+}
+
+#cactus {
+  position: absolute;
+  width: 55px;
+  height: 80px;
+  bottom: 290px;
+  right: 0;
+}
+
+#cactus img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.scoreContainer {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button.play {
+  border-style: solid;
+  border-width: 37px 0 37px 60px;
+}
+
+.button {
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  width: 0;
+  height: 74px;
+  border-color: transparent transparent transparent #202020;
+  transition: 1000ms all ease;
+  cursor: pointer;
+  border-style: double;
+  border-width: 0px 0 0px 60px;
+}
+
+.button:hover {
+  border-color: transparent transparent transparent #202020;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonRestar {
+  background: #202020;
+  box-sizing: border-box;
+  border-width: 5px;
+  width: 80px;
+  height: 74px;
+  border-color: #202020;
+  transition: 1000ms all ease;
+  cursor: pointer;
+  text-justify: auto;
+  color: white;
+  transition: 0.7s;
+  font-style: inherit;
+}
+
+.buttonRestar:hover {
+  background: white;
+  color: #202020;
+}
